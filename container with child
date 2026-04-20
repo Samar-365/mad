@@ -10,15 +10,39 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Column Widget Example"),
+          title: Text("Container with Child Example"),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("First Item", style: TextStyle(fontSize: 20)),
-            Text("Second Item", style: TextStyle(fontSize: 20)),
-            Text("Third Item", style: TextStyle(fontSize: 20)),
+            Container(
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
+              color: Colors.red,
+              child: Text(
+                "First Item",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
+              color: Colors.green,
+              child: Text(
+                "Second Item",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
+              color: Colors.blue,
+              child: Text(
+                "Third Item",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+            ),
           ],
         ),
       ),
